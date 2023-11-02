@@ -1,0 +1,29 @@
+</head>
+<script type="text/javascript">
+
+function mailKontrol()
+{
+var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+var mail = document.getElementById("mail").value;
+if(reg.test(mail) == false) 
+    {
+      alert('Hatalı Mail Formatı!');
+      return false;
+    }
+else{
+      alert('Dogru Mail Formatı.');
+      return true;	  
+    }
+}
+
+</script>
+</head>
+
+<body>
+<form id="frm">
+
+<input type="text" id="mail" /> Mail: </br>
+<input type="button" value="gönder" onclick="mailKontrol()" />
+
+</form>
+</body>
